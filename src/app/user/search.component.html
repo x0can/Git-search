@@ -1,0 +1,70 @@
+<body>
+    <div class="container jumbotron">
+        <ng-progress></ng-progress>
+        <div class="row" >
+          <div class="col-md-6" >
+            <app-search-form (getName)='findUser($event)'></app-search-form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="card jumbotron">
+              <div style="text-align: center" class="card"><h3> {{users.name}}</h3></div>
+              <table class="">
+                <tbody>
+                <tr>
+                  <th class="row btn btn-light">Github Username:</th>
+                    <td> <a href="{{users.html_url}}"  target="_blank">{{users.login}}</a></td>
+      
+                </tr>
+                <tr>
+                  <th class="row btn btn-light">Repositories:</th>
+                  <td >{{users.public_repos }}</td>
+                </tr>
+                <tr>
+                  <th class="row btn btn-light">Date created:</th>
+                  <td>{{users.created_at | datePipe }}</td>
+                </tr>
+                <tr>
+                  <th class="row btn btn-success">Followers:</th>
+                  <td>{{users.followers}}</td>
+                </tr>
+                <tr>
+                  <th class="row btn btn-warning">Following</th>
+                  <td>{{users.following}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-5 image-end">
+            <img src="{{users.avatar_url}} rounded-circle">
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container jumbotron #827717 lime darken-4">
+        
+          <div  class=" card">
+            <h2  style="text-align: center; color: darkblue; font-size: xx-large"> User Repositories</h2><hr>
+            <div class="card-body">
+             
+                
+                <form *ngFor='let repository of userRepos.newRepository' class="col-md-6 bg-info">
+                  <div *ngIf='repository.name'>
+                      <a href="{{repository.html_url}}" target="_blank" class="btn btn-success" >{{repository.name}}</a>
+      
+                      <br>
+                    <p class="">Description: {{repository.description}}</p><hr>
+                    <br>
+                    <p>Date Created: {{repository.created_at | datePipe}}</p>
+                  </div>
+                </form>
+              
+              
+            </div>
+          </div>
+        
+      </div>
+      
+</body>
