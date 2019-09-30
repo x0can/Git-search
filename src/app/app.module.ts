@@ -15,6 +15,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import {FormsModule} from '@angular/forms';
 import {SearchRequestService} from './search-request.service';
 import { DatePipePipe } from './date-pipe.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 
 
@@ -29,7 +30,8 @@ import { DatePipePipe } from './date-pipe.pipe';
     SearchComponent,
     RepositoriesComponent,
     SearchFormComponent,
-    DatePipePipe
+    DatePipePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
