@@ -8,9 +8,9 @@
         </div>
         <div class="row">
           <div class="col-md-7">
-            <div class="card">
+            <div class=" bg-info">
               <div style="text-align: center" class="card"><h3> {{users.name}}</h3></div>
-              <table class="jumbotron">
+              <table class="jumbotron container">
                 <tbody>
                 <tr>
                   <th class="row btn btn-light">Github Username:</th>
@@ -45,13 +45,13 @@
       </div>
       <div class="container jumbotron #827717 lime darken-4">
         
-          <div  class=" card">
+          <div  class=" jumbotron">
             <h2  style="text-align: center; color: darkblue; font-size: xx-large"> User Repositories</h2><hr>
-            <div class="card-body">
+            <div class="">
              
                 
-                <form *ngFor='let repository of userRepos.newRepository' class="col-md-6 bg-info">
-                  <div *ngIf='repository.name'>
+                <form *ngFor='let repository of userRepos.newRepository' class=" bg-info" >
+                  <div *ngIf='repository.name' appHighlight>
                       <a href="{{repository.html_url}}" target="_blank" class="btn btn-success" >{{repository.name}}</a>
       
                       <br>
