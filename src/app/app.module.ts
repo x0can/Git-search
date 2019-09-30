@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {HttpClientModule} from '@angular/common/http';
-import { NgProgressModule } from '@ngx-progressbar/core';
+
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { HighlightDirective } from './highlight.directive';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,14 +32,15 @@ import { HighlightDirective } from './highlight.directive';
     RepositoriesComponent,
     SearchFormComponent,
     DatePipePipe,
-    HighlightDirective
+    HighlightDirective,
+   
   ],
   imports: [
     BrowserModule,
       RoutingModule,
       RouterModule,
       FormsModule,
-      NgProgressModule.forRoot(),
+  
       NgProgressHttpModule,
       
       HttpClientModule
