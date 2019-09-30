@@ -8,29 +8,29 @@
         </div>
         <div class="row">
           <div class="col-md-7">
-            <div class=" bg-info">
+            <div class="card">
               <div style="text-align: center" class="card"><h3> {{users.name}}</h3></div>
-              <table class="jumbotron container">
+              <table class=" jumbotron bg-info  form-group">
                 <tbody>
                 <tr>
-                  <th class="row btn btn-light">Github Username:</th>
+                  <th class=" btn btn-light ">Github Username:</th>
                     <td> <a href="{{users.html_url}}"  target="_blank">{{users.login}}</a></td>
       
                 </tr>
                 <tr>
-                  <th class="row btn btn-light">Repositories:</th>
+                  <th class="btn btn-light">Repositories:</th>
                   <td >{{users.public_repos }}</td>
                 </tr>
                 <tr>
-                  <th class="row btn btn-light">Date created:</th>
+                  <th class=" btn btn-light">Date created:</th>
                   <td>{{users.created_at | datePipe }}</td>
                 </tr>
                 <tr>
-                  <th class="row btn btn-success">Followers:</th>
+                  <th class="btn btn-success">Followers:</th>
                   <td>{{users.followers}}</td>
                 </tr>
                 <tr>
-                  <th class="row btn btn-warning">Following</th>
+                  <th class=" btn btn-warning">Following</th>
                   <td>{{users.following}}</td>
                 </tr>
                 </tbody>
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="col-md-5 image-end">
-            <img src="{{users.avatar_url}} rounded-circle">
+            <img src="{{users.avatar_url}} "class="img-responsive rounded-circle">
           </div>
         </div>
         <hr>
@@ -50,8 +50,8 @@
             <div class="">
              
                 
-                <form *ngFor='let repository of userRepos.newRepository' class=" bg-info" >
-                  <div *ngIf='repository.name' appHighlight>
+                <form *ngFor='let repository of userRepos.newRepository' class=" bg-info"  >
+                  <div *ngIf='repository.name'appHighlight>
                       <a href="{{repository.html_url}}" target="_blank" class="btn btn-success" >{{repository.name}}</a>
       
                       <br>
