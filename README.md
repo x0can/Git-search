@@ -1,28 +1,61 @@
-# GithubSearch
-
-Second Independent project for Moringa Core, June 1,2018
+# GitSearch
 
 
+## Author
+
+[Alex Mwaura](https://github.com/alexmwaura/Git-search)
 
 ## Description
-A single page application for searching github users and repositories. The site uses the Github API to perform searches on Github, and display the results to the users.The website is made using angular js framework, and uses components, custom directives, custom pipes, routing modules and classes to make the finished product.
 
-## Technologies Used
-HTML
+This is an Angular CLI application that allows a user to enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories based on github user name.
 
-BOOTSTRAP
 
-Angular js
 
+## Live Page 
+https://gitsearchapp.firebaseapp.com/users 
+
+
+
+Composed of two main components.
+* `Search Users` -search for users on git-hub based on their usernames.
+* `Search Repositories` -search for repositories on git-hub based on their authoers name.
+
+## BDD ##
+| Behavior                  | Input                     | Output                    |
+| ------------------------- | ------------------------- | ------------------------- |
+| Search for a github profile |Enter the username of the github User name | Displays the name, username, number of repositories,Joining date, followers, following and lists the repos  |
+
+## Installation / Setup instruction
+* Open Terminal {Ctrl+Alt+T}
+
+* git clone ```https://github.com/alexmwaura/Git-search```
+
+* cd Git-Search
+
+* code . or atom . based on the text editor you have.
+
+* Run ng serve for a dev server. 
+
+* Navigate to http://localhost:4200/. 
+
+* `npm install && ng serve`
+
+## Technology used ##
+
+* Angular CLI
+* HTML 
+* CSS
+* Bootstrap 
+* Typescript
+* Generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
 
 ## Known Bugs
+* No known bug now but pull requests are encouraged
 
-No known bugs so far
+## Contact Information 
+
+If you have any question or contributions, please email me at [alexmwaura43@gmail]
 
 ## License
-
-Copyright (c) Permission is hereby granted, free of charge, to any person obtaining a copy of this code
-
-## Further help
-
-contact me for for further help
+* *MIT License:*
+* Copyright (c) 2019 **Alex mwaura**
