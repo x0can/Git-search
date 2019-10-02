@@ -12,7 +12,7 @@ This is an Angular CLI application that allows a user to enter a GitHub username
 
 
 ## Live Page 
-https://gitsearchapp.firebaseapp.com/users 
+https://ghpages2-ae9bc.firebaseapp.com/users
 
 
 
